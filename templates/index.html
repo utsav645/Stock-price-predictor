@@ -29,7 +29,7 @@
                 <li>{{ date }}: ₹{{ "%.2f"|format(price) }}</li>
             {% endfor %}
         </ul>
-        <img src="{{ plot_url }}" alt="Prediction Plot" width="700">
+        <img src="{{ url_for('static', filename='plot.png') }}" width="700">
     {% endif %}
 </body>
 </html>
