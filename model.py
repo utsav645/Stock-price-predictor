@@ -21,7 +21,9 @@ def fetch_stock_data(ticker, start, end, market):
             raise ValueError("No data found for the given ticker.")
         return stock_data['Close']
     except Exception as e:
-        print("Error fetching stock data:", e)
+        print("FULL ERROR:", e)
+        import traceback
+        traceback.print_exc()
         return None
 
 def train_arima_model(series):
